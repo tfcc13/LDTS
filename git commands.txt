@@ -1,0 +1,80 @@
+											***Git Basic Commands***
+
+git init // inicia um diretorio como git (cria um ficheiro .git oculto)
+
+git add <ficheiro> // Faz stage a um ficheiro
+
+git add . // Faz stage a todos os ficheiros modificados
+
+git add --all (-a) // faz stage a todos os ficheiros
+
+git commit // faz commit aos ficheiros staged (abre o editor de texto para escrever uma pequena descrição)
+
+git commit -m "TEXTO" // faz commit e acrescenta a descrição (já não abre o editor de texto)
+
+git status // mostra o estado em que os ficheiros estão 
+
+git status // mostra o estado em que os ficheiros estão com mais preciso , mostra 2 colunas antes do nome de ficheiro (a primeira coluna representa a staging area, e a segunda o diretorio)
+
+git rm <ficheiro> // remove um ficheiro e faz stage
+
+git log // mostra o histórico dos commits (author, data, hash number do commit, descrição e o ficheiro que foi modificado)
+
+git log --oneline //versão mais simplificada do log
+
+git log --oneline -1 // mostra apenas uma linha, pode se escolher qualquer numero de linhas a mostrar
+
+git log -p // mostra as diferenças do que foi modificado em cada commit 
+
+
+git log -1 -p // mostra as diferenças de um commit - pode-se ver o número de commits que se pretende 
+
+												***RAMOS***
+git branch <branch name> // cria um ramo
+
+git branch // mostra os ramos existentes, o que tiver um asterisco antes do nome é o apontado pelo HEAD no momento
+
+git checkout testing // muda para o HEAD para o ramo testing
+
+git checkout -b testing // cria o ramo tetsing e  muda o HEAD para esse ramo
+
+git merge testing // faz merge do ramo identificado (testing) no ramo atual 
+
+git branch -d testing // faz delete do branch testing 
+
+											***Repositórios Remotos***
+											
+git clone <git repository url> / cria um clone do repositório no diretorio atual
+
+git remote -v // mostra o link de origem do repositório
+
+git remote add origin <git repository url> // addiciona o link do repositorio remoto ao repositorio local, nota, o nome origin podia ser outro e é possível linkar mais que um repositório
+
+git fetch origin // faz download dos dados modificados do repositório remoto para o repositório local, mas não faz merge
+
+git checkout --track origin/feature // cria um ramo chamado feature que segue o ramo origin
+
+git pull origin master // faz fetch e merge do repositorio remoto  no repositório local
+
+git push // envia os dados modificados no repositíorio local para o repositório remoto
+
+git push -u origin tcbranch //faz o mesmo que o push e define que o ramo tcbranch segue o origin 
+
+ 
+												*** Reversão ***
+git checkout -- <FILENAME> // desfaz as mudanças de um ficheiro quando ele não foi staged
+
+git reset --hard // remove todas as modificações feitas de ficheiros que nao foram stagedd
+
+git reset HEAD <filename> // faz unstage a um determinado ficheiro que não tenha sido commit 
+
+git reset // faz unstage a todas as modificações que não tenham sido commit
+
+git reset --hard <commit-id> // desfaz as modificações de um commit que ainda não tenha sido push
+
+git revert <commit-id> // tenta reverter as mudanças de um commit que ja teve um push feito, não elimina o commit do historico (EVITAR TER QUE FAZER ISTO) 
+
+
+
+
+
