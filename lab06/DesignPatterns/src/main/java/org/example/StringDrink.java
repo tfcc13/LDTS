@@ -3,10 +3,13 @@ package org.example;
 public class StringDrink {
     String text_;
 
+    public StringDrink() {
+        text_ = "";
+    }
+
     public StringDrink(String text) {
         text_ = text;
     }
-
 
     public String getText() {
         return text_;
