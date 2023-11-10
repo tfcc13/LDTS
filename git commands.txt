@@ -14,7 +14,7 @@ git commit -m "TEXTO" // faz commit e acrescenta a descrição (já não abre o 
 
 git status // mostra o estado em que os ficheiros estão 
 
-git status // mostra o estado em que os ficheiros estão com mais preciso , mostra 2 colunas antes do nome de ficheiro (a primeira coluna representa a staging area, e a segunda o diretorio)
+git status --short // mostra o estado em que os ficheiros estão com mais preciso , mostra 2 colunas antes do nome de ficheiro (a primeira coluna representa a staging area, e a segunda o diretorio)
 
 git rm <ficheiro> // remove um ficheiro e faz stage
 
