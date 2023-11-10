@@ -14,5 +14,4 @@ public class StringInverterTest {
         si.execute(drink);
         assertEquals("DCBA", drink.getText());
     }
-
 }
