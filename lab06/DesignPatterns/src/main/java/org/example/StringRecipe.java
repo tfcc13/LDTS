@@ -17,4 +17,11 @@ public class StringRecipe{
         }
     }
 
+
+    public void undo(StringDrink drink) {
+        for (StringTransformer elem : recipleList) {
+            elem.undo(drink);
+        }
+    }
+
 }

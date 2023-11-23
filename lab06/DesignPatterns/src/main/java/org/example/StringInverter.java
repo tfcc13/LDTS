@@ -8,5 +8,9 @@ public class StringInverter implements  StringTransformer {
          drink.setText(String.valueOf(temp));
     }
 
+    @Override
+    public void undo(StringDrink drink) {
+        execute(drink);
+    }
 
 }
